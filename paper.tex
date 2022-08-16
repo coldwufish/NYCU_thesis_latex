@@ -1,0 +1,240 @@
+% overleaf的免費帳號不能邀請其他人共同編輯, 下面是我的推薦連結
+% https://www.overleaf.com?r=cc96d36b&rm=d&rs=b
+% 如果可以的話, 幫我增加一下點數 XD
+
+% 如果需要更新, 請email至: wufish@gmail.com
+
+\documentclass[12pt,a4paper,oneside]{book}  % NYCU碩論樣板
+
+\linespread{2}
+
+\usepackage[ top=2.5cm,bottom=2.5cm,left=3cm,right=2cm ]{ geometry }
+
+%\documentclass[oneside,zh]{nctuthesis}
+%\documentclass[conference]{IEEEtran}
+%\documentclass[onecolumn, journal, 12pt]{IEEEtran}
+%\documentclass[12pt,draftcls,onecolumn]{IEEEtran}
+%\setlength{\baselineskip}{12.7pt}
+\usepackage{subfigure}
+%\usepackage{subcaption}
+\usepackage{caption}
+\usepackage{CJKutf8}
+\usepackage{indentfirst}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{amsthm}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{multirow}
+\usepackage{setspace}
+\usepackage{cite}
+\usepackage{balance}
+\usepackage{amssymb}
+\usepackage{textcomp}
+\usepackage{color}
+\usepackage[ampersand]{easylist}
+\ListProperties(Hide=100, Hang=true, Progressive=3ex, Style*=$\bullet$ ,
+Style2*=\tiny$\blacksquare$ ,Style3*=$\circ$ ,Style4*=-- )
+\usepackage{changepage}
+%\usepackage{algorithmic}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+\usepackage{graphics}
+\usepackage{epsfig}
+\floatname{algorithm}{Algorithm}
+\renewcommand{\algorithmicrequire}{\textbf{Input:}}
+\renewcommand{\algorithmicensure}{\textbf{Output:}}
+\renewcommand{\algorithmiccomment}{// }
+\usepackage{verbatim}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{prop}{Proposition}
+\newtheorem{defn}{Definition}
+\usepackage{array}
+\usepackage{eqparbox}
+\usepackage{textcomp}
+\usepackage{amssymb}
+\usepackage[T1]{fontenc}
+\usepackage{enumerate}
+
+\renewcommand*\rmdefault{ptm}
+\usepackage[font={rm}]{caption}
+
+\renewcommand\algorithmiccomment[1]{%
+  \hfill\#\ \eqparbox{COMMENT}{#1}%
+}
+\usepackage{verbatim}
+
+\usepackage{indentfirst}
+
+\usepackage{chngcntr}
+\counterwithout{figure}{chapter}
+\counterwithout{table}{chapter}
+
+\usepackage{color}
+\usepackage{colortbl}
+\newcommand{\textred}[1]{\textcolor{red}{#1}}
+\newcommand{\textblue}[1]{\textcolor{blue}{#1}}
+\newcommand{\textcyan}[1]{\textcolor{cyan}{#1}}
+\newcommand{\myHuge}[1]{\fontsize{40}{50} #1}
+
+
+% --------------------------------------------
+% 在這邊寫自己的資料
+\newcommand{\chineseTitle}{中文論文名字}
+\newcommand{\englishTitle}{English Title}
+\newcommand{\studentCnName}{學生名字}
+\newcommand{\studentEnName}{XXXX Wu} % 書名頁
+\newcommand{\studentEnNameA}{Wu, XXXX} % 封面用
+% 英文名字有兩種寫法, 一個是姓在後, 一個是放前面. 
+
+\newcommand{\advisorCnName}{指導教授}
+\newcommand{\advisorEnName}{OOOO Tseng} % 書名頁
+\newcommand{\advisorEnNameA}{Tseng, OOOO} % 封面用
+\newcommand{\ThesisDate}{August 2022} % 碩論的日期
+\newcommand{\ThesisDateTW}{中華民國~ 一一一年八月}
+
+% --------------------------------------------
+
+
+% source code hightlighting
+\usepackage{listings}
+\lstset{
+	numbers=left,
+	stepnumber=1,
+	firstnumber=1,
+	captionpos=b,
+	tabsize=2,
+	basicstyle=\small,
+	numberfirstline=true
+}
+
+% setting the page number to footer
+\usepackage{fancyhdr}
+\fancyhf{}
+\cfoot{\thepage}
+\pagestyle{fancy}
+% no header and footer bar
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% line height setting
+\linespread{1.5}
+\usepackage{setspace}
+
+\usepackage{background}
+\newcommand\DeactivateBG{\backgroundsetup{contents={}}}
+\newcommand\ActivateBG{
+	\backgroundsetup{
+		contents={\includegraphics[]{Figures/logo.png}},
+		scale=1,
+		opacity=0.3,
+		angle=0
+	}
+}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Textclass specific LaTeX commands.
+%\newtheorem{theorem}{Theorem}
+%\newtheorem{lemma}{Lemma}
+%\newtheorem{prop}{Proposition}
+%\newtheorem{defn}{Definition}
+
+\usepackage{pdfpages}
+
+%\doublespacing
+\begin{document}
+
+
+\DeactivateBG
+
+%Cover
+%\includepdf[pages={1},pagecommand={\thispagestyle{empty}}]{Andy_cover1.pdf}
+%\includepdf[pages={1},pagecommand={\thispagestyle{empty}}]{Andy_cover2.pdf}
+
+%審定書
+%\includepdf[pages={1},pagecommand={\thispagestyle{empty}}]{auth_ch_Andy.pdf}
+%\includepdf[pages={1},pagecommand={\thispagestyle{empty}}]{auth_en_Andy.pdf}
+
+%授權書
+%\includepdf[pages={1},pagecommand={\thispagestyle{empty}}]{auth_Andy.pdf}
+
+
+\begin{CJK*}{UTF8}{bkai}
+
+
+% =========================================================================
+% 封面的設定, 像是日期之類的 settings for cover 
+\newgeometry{top=3cm,bottom=3cm,left=3cm,right=3cm}
+
+% 第一頁的封面, 記得修改系所
+\input{covers/front.tex}
+
+% 第二頁的書名頁, 記得修改系所, 日期
+\input{covers/inside.tex}
+
+% 博士論文版的封面&書名頁
+\input{covers/front_phd.tex}
+\input{covers/inside_phd.tex}
+
+
+\restoregeometry
+% =========================================================================
+
+% 加入浮水印
+\ActivateBG
+
+\frontmatter
+\pagenumbering{roman}
+{\fontfamily{ptm}\selectfont
+
+
+% =========================================================================
+% 中英文摘要 chinese and english abstract
+\addcontentsline{toc}{chapter}{摘\,\,\,\,\,要} \input{Sections/Abstract_chinese} \newpage
+\addcontentsline{toc}{chapter}{Abstract} \input{Sections/Abstract} \newpage
+
+% 致謝 Acknowledgement
+\addcontentsline{toc}{chapter}{誌\,\,\,\,\,謝} \input{Sections/Acknowledgement}\newpage
+% =========================================================================
+
+\addcontentsline{toc}{chapter}{Contents} \tableofcontents \newpage
+\renewcommand{\numberline}[1]{Figure~#1\hspace*{1em}}
+\addcontentsline{toc}{chapter}{List of Figures} \listoffigures \newpage
+\renewcommand{\numberline}[1]{Table~#1\hspace*{1em}}
+%\addcontentsline{toc}{chapter}{List of Tables} \listoftables \newpage
+
+\mainmatter
+\pagenumbering{arabic} % enabling page numbering
+
+% =========================================================================
+% 論文的內文, 可以每個章節一個.tex檔案 (put your statements in the following)
+\input{Sections/1.Introduction} \newpage
+\input{Sections/2.Relatedwork} \newpage
+\input{Sections/3.Architecture} \newpage
+\input{Sections/4.Methodology} \newpage
+\input{Sections/5.Evaluation} \newpage
+\input{Sections/6.Conclusion} \newpage
+% =========================================================================
+
+
+% =========================================================================
+% 參考文獻的檔案 Reference file: ref.bib
+% ref的寫法可以參考這邊: https://hackmd.io/Bc1-FIIISka6DW15sPprAw
+\addcontentsline{toc}{chapter}{Bibliography}
+\bibliographystyle{IEEEtran}
+\bibliography{ref}
+}
+% =========================================================================
+
+
+\end{CJK*}
+\balance
+
+\end{document}
+
+
+
